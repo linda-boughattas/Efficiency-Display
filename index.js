@@ -1,6 +1,6 @@
 const watermeter = {
     barecode:"",
-    t0: 0,
-    tf: 0
+    n0: 0,
+    nf: 0
 }
 
