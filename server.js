@@ -1,28 +1,26 @@
 const express = require('express');
+const http = require('http');
+const path = require('path');
+const socketIo = require('socket.io');
+
 const app = express();
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const server = http.createServer(app);
+const io = socketIo(server);
 
-// Replace with your website's domain name or IP address
-const websiteUrl = '172.24.35.71';
-
-// ** Serve static files from the 'public' directory **
-app.use(express.static(__dirname+ '/public'));  // This line goes here
-
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html'); // Serve the website's HTML file
-});
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', (socket) => {
-  console.log('Raspberry Pi connected!');
+    console.log('A user connected');
 
-  socket.on('data', (data) => {
-    console.log('Received data:', data);
-    // Broadcast the data to all connected clients (your website)
-    io.emit('data-update', data);
-  });
+    // Handle disconnection
+    socket.on('disconnect', () => {
+        console.log('A user disconnected');
+    });
 });
 
-http.listen(3000, () => {
-  console.log('Server listening on port 3000');
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
+
