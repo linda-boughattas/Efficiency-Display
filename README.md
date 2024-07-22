@@ -15,7 +15,7 @@ This project was created as part of a Makeathon competition in [NRW6.0](https://
 1. Clone the repository:
     ```bash
     git clone https://github.com/linda-boughattas/Efficiency-Display.git
-    cd efficiency
+    cd Efficiency-Display
     ```
 
 2. Install dependencies:
