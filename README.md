@@ -1,6 +1,6 @@
 # WMLine
 
-WMLine is a display application developed for the automated watermeters efficiency testing line at Sopal. This web app uses Firebase to manage and visualize product data. To ensure the app's animations are functional, we included a feature to generate random data for each product. The app is modular and responsive, adapting to different screen sizes for a seamless user experience. 
+WMLine is a display application developed for the automated watermeters efficiency testing line at Sopal. This web app uses Firebase to manage and visualize product data. To ensure the app's animations are functional, we included a feature to generate random data for each product. The app is modular and responsive, adapting to different screen sizes. 
 
 This project was created as part of a Makeathon competition in [NRW6.0](https://www.facebook.com/NationalRoboticsWeekend).
 
