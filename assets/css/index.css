@@ -69,7 +69,7 @@ button {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
-    cursor: pointer; /* Ensure cursor changes to pointer on hover */
+    cursor: pointer; 
 }
 
 button:active {
@@ -88,8 +88,8 @@ button:active {
 
 .buttons {
     position: absolute;
-    bottom: 20px; /* Adjust bottom spacing as needed */
-    right: 100px; /* Adjust left spacing as needed */
+    bottom: 20px; 
+    right: 100px; 
     display: flex;
     flex-direction: column;
 }
@@ -106,10 +106,9 @@ button:active {
     background-color: red;
 }
 
-/* Disabled Button Style */
-button:disabled {
-    background-color: #ccc; /* Light gray background for disabled state */
-    color: #666; /* Darker gray text for disabled state */
-    cursor: not-allowed; /* Change cursor to not-allowed for disabled state */
-}
 
+button:disabled {
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed;
+}
