@@ -30,6 +30,7 @@ When you click the Launch button, the app will display the status of products in
 - **Orange**: Scanning/Loading
 - **Green**: Efficient
 - **Red**: Inefficient
+  
 Random data generation ensures that animations function correctly by creating random data for each product. The Stop button resets the table.
 
 ## Contributing
