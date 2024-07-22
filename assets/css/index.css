@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+    background-image: url('/assets/img/bg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 200px;
+}
+
+.container {
+    background-color: #041c29;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(138, 246, 246, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td.product {
+    background-color: #1f2937;
+    border: 1px solid #041c29;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+td.product:hover {
+    background-color: #333;
+}
+
+.table_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    height: 60px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    color: #ffff;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer; /* Ensure cursor changes to pointer on hover */
+}
+
+button:active {
+    transform: translateY(2px);
+    background-color: #8af6f6;
+    transition: 2ms;
+}
+
+.stop {
+    background-color: red;
+}
+
+.launch {
+    background-color: rgb(47, 232, 84);
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20px; /* Adjust bottom spacing as needed */
+    right: 100px; /* Adjust left spacing as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.loading {
+    background-color: orange;
+}
+
+.success {
+    background-color: green;
+}
+
+.failure {
+    background-color: red;
+}
+
+/* Disabled Button Style */
+button:disabled {
+    background-color: #ccc; /* Light gray background for disabled state */
+    color: #666; /* Darker gray text for disabled state */
+    cursor: not-allowed; /* Change cursor to not-allowed for disabled state */
+}
+
