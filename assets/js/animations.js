@@ -8,7 +8,7 @@ function createProductData() {
     const barcode = Math.floor(Math.random() * 1000000);
     const numInitial = Math.floor(Math.random() * 100);
     const numFinal = Math.floor(Math.random() * 100);
-    const timestamp = new Date().toISOString(); // Add timestamp
+    const timestamp = new Date().toISOString();
     return { barcode, numInitial, numFinal, timestamp };
 }
 
@@ -28,12 +28,11 @@ function clearAllTimeouts() {
 
 function animateProduct(product, rowIndex, colIndex, onComplete) {
     const startTimeout = setTimeout(() => {
-        product.style.backgroundColor = 'orange'; // Loading color
+        product.style.backgroundColor = 'orange'; // Loading
 
         const data = createProductData();
         const { barcode, numInitial, numFinal, timestamp } = data;
 
-        // Store product data in Firebase
         const newProductRef = push(productsRef);
 
         set(newProductRef, data)
@@ -41,14 +40,14 @@ function animateProduct(product, rowIndex, colIndex, onComplete) {
             .catch(error => console.error('Error saving product data:', error));
 
         const finishTimeout = setTimeout(() => {
-            const isSuccess = numFinal > numInitial; // Example condition for success
+            const isSuccess = numFinal > numInitial; // Equation of efficiency (will be adjusted)
             product.style.backgroundColor = isSuccess ? 'green' : 'red';
             console.log(`Product ${rowIndex + 1}-${colIndex + 1} set to ${isSuccess ? 'green' : 'red'}`);
             onComplete();
-        }, 1000); // Change color after 1000ms (1 second)
+        }, 1000); // Change color after 1000ms
 
         timeouts.push(finishTimeout);
-    }, rowIndex * 1500); // Adjust timing as needed
+    }, rowIndex * 1500);
 
     timeouts.push(startTimeout);
 }

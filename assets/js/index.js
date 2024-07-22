@@ -17,8 +17,6 @@ function launch() {
         animationsRemaining--;
         if (animationsRemaining === 0) {
             launchButton.disabled = false;
-            // Optionally call getProductsSorted here
-            // getProductsSorted();
         }
     };
 
@@ -37,7 +35,7 @@ function stop() {
     resetColors();
     launchButton.disabled = false;
 
-    // Archive the existing product data with a timestamp
+
     archiveData()
         .then(() => {
             console.log('Product data successfully archived');
@@ -56,6 +54,6 @@ function stop() {
         });
 }
 
-// Event listeners for launch and stop buttons
+
 launchButton.addEventListener('click', launch);
 document.querySelector('.stop').addEventListener('click', stop);
