@@ -42,9 +42,14 @@ Random data generation ensures that animations function correctly by creating ra
 5. Create a pull request.
 
 ## Screenshots
-![Screenshot 2024-07-22 123233](https://github.com/user-attachments/assets/8dd90aee-e587-4871-830b-21763e63c86a)
-![Screenshot 2024-07-22 134723](https://github.com/user-attachments/assets/3623da71-1c46-4157-99d5-446ea0958d3f)
-![Screenshot 2024-07-22 134708](https://github.com/user-attachments/assets/2223a307-0d45-4974-9306-616289b15028)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8dd90aee-e587-4871-830b-21763e63c86a" alt="database" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3623da71-1c46-4157-99d5-446ea0958d3f" alt="on launch" width="500">
+  <img src="https://github.com/user-attachments/assets/2223a307-0d45-4974-9306-616289b15028" alt="on stop" width="500">
+</p>
 
 ## Firebase Setup
 
